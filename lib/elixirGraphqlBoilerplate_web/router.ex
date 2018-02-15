@@ -8,10 +8,10 @@ defmodule ElixirGraphqlBoilerplateWeb.Router do
   scope "/" do
     pipe_through(:graphql)
 
-    forward("/graphql", Absinthe.Plug, schema: ElixirGraphqlBoilerplateWeb.Schema)
+    forward("/graphql", Absinthe.Plug, schema: ElixirGraphqlBoilerplate.Schema)
 
     if Mix.env() == :dev do
-      forward("/graphiql", Absinthe.Plug.GraphiQL, schema: ElixirGraphqlBoilerplateWeb.Schema)
+      forward("/graphiql", Absinthe.Plug.GraphiQL, schema: ElixirGraphqlBoilerplate.Schema)
     end
   end
 end
