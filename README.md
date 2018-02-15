@@ -2,6 +2,7 @@
 
 To start your Phoenix server:
 
+  * Create database `sh scripts/create_database.sh` (verify that the settings are correct in devs.exs)
   * Install dependencies with `mix deps.get`
   * Create and migrate your database with `mix ecto.create && mix ecto.migrate`
   * Start Phoenix endpoint with `mix phx.server`
