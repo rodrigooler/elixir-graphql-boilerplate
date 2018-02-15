@@ -1,7 +1,7 @@
 defmodule ElixirGraphqlBoilerplate.Models.User do
   use Ecto.Schema
   import Ecto.Changeset
-  alias ElixirGraphqlBoilerplate.User
+  alias ElixirGraphqlBoilerplate.Models.User
 
   schema "users" do
     field(:active, :boolean, default: false)
