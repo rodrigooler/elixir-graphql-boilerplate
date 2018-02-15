@@ -1,7 +1,7 @@
-defmodule NiverApp.Models.User do
+defmodule ElixirGraphqlBoilerplate.Models.User do
   use Ecto.Schema
   import Ecto.Changeset
-  alias NiverApp.User
+  alias ElixirGraphqlBoilerplate.User
 
   schema "users" do
     field(:active, :boolean, default: false)

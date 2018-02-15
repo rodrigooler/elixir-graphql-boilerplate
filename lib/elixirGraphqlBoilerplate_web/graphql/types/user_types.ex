@@ -1,7 +1,7 @@
-defmodule NiverApp.Types.User do
+defmodule ElixirGraphqlBoilerplate.Types.User do
   use Absinthe.Schema.Notation
 
-  @desc "A user of the niverapp"
+  @desc "A user of the ElixirGraphqlBoilerplate"
   object :user do
     field(:id, :id)
     field(:active, :boolean)
