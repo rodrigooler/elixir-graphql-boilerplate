@@ -10,6 +10,9 @@
 # We recommend using the bang functions (`insert!`, `update!`
 # and so on) as they will fail if something goes wrong.
 
+alias ElixirGraphqlBoilerplate.Repo
+alias ElixirGraphqlBoilerplate.Models.User
+
 1..100
 |> Enum.each(fn _ ->
   Repo.insert!(%User{

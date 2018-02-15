@@ -17,14 +17,12 @@ defmodule ElixirGraphqlBoilerplate.Models.User do
   def changeset(%User{} = user, attrs) do
     user
     |> cast(attrs, [
-      :active,
       :email,
       :first_name,
       :last_name,
       :password
     ])
     |> validate_required([
-      :active,
       :email,
       :first_name,
       :last_name,
