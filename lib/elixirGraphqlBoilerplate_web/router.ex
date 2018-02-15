@@ -1,11 +1,17 @@
 defmodule ElixirGraphqlBoilerplateWeb.Router do
   use ElixirGraphqlBoilerplateWeb, :router
 
-  pipeline :api do
-    plug :accepts, ["json"]
+  pipeline :graphql do
+    plug(:accepts, ["json"])
   end
 
-  scope "/api", ElixirGraphqlBoilerplateWeb do
-    pipe_through :api
+  scope "/" do
+    pipe_through(:graphql)
+
+    forward("/graphql", Absinthe.Plug, schema: ElixirGraphqlBoilerplateWeb.Schema)
+
+    if Mix.env() == :dev do
+      forward("/graphiql", Absinthe.Plug.GraphiQL, schema: ElixirGraphqlBoilerplateWeb.Schema)
+    end
   end
 end
